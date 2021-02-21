@@ -1,0 +1,31 @@
+<ion-content fullscreen class="background">
+  <ion-card>
+
+    <ion-card-content>
+
+      <ion-list>
+        <ion-list-header class="title">
+          Recent Conversations
+        </ion-list-header>
+        
+        <div *ngFor="let user of users">
+          <ion-item (click)="openChat(user.key)" *ngIf="user.key !== uid">
+            <ion-avatar *ngIf="user.picture" slot="start">
+              <img src="{{user.picture}}">
+            </ion-avatar>
+            <ion-avatar *ngIf="!user.picture" slot="start">
+              <img src="/assets/img/user-default.png">
+            </ion-avatar>
+            <ion-label>
+              <h2>{{user.name}}</h2>
+              <p>{{user.email}}</p>
+            </ion-label>
+          </ion-item>
+        </div>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

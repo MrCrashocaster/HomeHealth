@@ -1,0 +1,33 @@
+<ion-content fullscreen class="background">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+    <ion-avatar *ngIf="!user.picture" slot="start" class="profilepic">
+      <img src="/assets/img/user-default.png">
+    </ion-avatar>
+    <ion-avatar *ngIf="user.picture" slot="start" class="profilepic">
+      <img src="{{user.picture}}">
+    </ion-avatar>
+  </ion-item>
+  </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+          <ion-item> 
+              <b>Name</b>: {{user.name}}
+            </ion-item>
+            <ion-item> 
+                <b>Email</b>: {{user.email}}
+              </ion-item>
+      </ion-list>        
+
+      <ion-button color="primary" shape= "round" (click)='update()'><ion-icon slot="end" name="image"></ion-icon>Change Picture</ion-button>
+      <ion-button color="danger" shape= "round"  (click)='changePassword()'><ion-icon slot="end" name="log-out"></ion-icon>Change Password</ion-button> 
+      <ion-button color="danger" shape= "round"  (click)='logout2()'><ion-icon slot="end" name="log-out"></ion-icon>Logout</ion-button> 
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+</ion-content>

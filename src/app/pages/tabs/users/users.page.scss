@@ -1,0 +1,42 @@
+.background{
+    --background: url(src/assets/img/background.jpg) 0 0/100% 100% no-repeat;
+}
+
+.ion-col {
+    display: grid;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.item.item-trns {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white; 
+}
+
+ion-list-header {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.userinfo {
+    font-size: 35px;
+    font-weight: bolder; 
+    color: rgba(0, 0, 0, 0.753);  
+}
+
+.useremail {
+    font-size: 25px;
+    font-weight: 600;
+    
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    }
+
+ion-searchbar {
+--background: transparent;
+--ion-color-base: transparent !important;
+}

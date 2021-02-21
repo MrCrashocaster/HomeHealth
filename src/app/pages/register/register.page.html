@@ -1,0 +1,37 @@
+<ion-content padding class="background">
+  <ion-grid>
+    <ion-row class="ion-col">
+      <form [formGroup]="registerForm">
+
+        <ion-title class="ion-title">CHAMPION</ion-title>
+
+        <ion-item color="white">
+          <ion-label position="floating" style="font-weight: bolder;">Display Name:<ion-text color="danger"> *</ion-text>
+          </ion-label>
+          <ion-input style="color:white;" formControlName="name" type="text" clear-input="true"></ion-input>
+        </ion-item>
+
+        <ion-item color="white">
+          <ion-label position="floating" style="font-weight: bolder;">Email:<ion-text color="danger"> *</ion-text>
+          </ion-label>
+          <ion-input style="color:white;" formControlName="email" type="email" clear-input="true"></ion-input>
+        </ion-item>
+
+        <ion-item color="white">
+          <ion-label position="floating" style="font-weight: bolder;">Password: <ion-text color="danger"> *</ion-text>
+          </ion-label>
+          <ion-input style="color:white;" formControlName="password" type="password"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="createAccount()" color="primary" shape="round">
+          <ion-icon slot="end" name="person-add"></ion-icon>Create
+        </ion-button>
+        <ion-button routerLink="/login" color="primary" fill="clear"> Login </ion-button>
+
+
+
+      </form>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
